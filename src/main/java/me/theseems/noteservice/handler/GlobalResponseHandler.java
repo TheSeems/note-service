@@ -28,7 +28,7 @@ public class GlobalResponseHandler implements ResponseBodyAdvice {
 
         if ((status != 200 && status != 0)
             || body instanceof ApiResponse
-            || !request.getURI().getPath().startsWith("note")) {
+            || !request.getURI().getPath().startsWith("/note")) {
             return body;
         }
 

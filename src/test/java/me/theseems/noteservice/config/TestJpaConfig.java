@@ -70,7 +70,6 @@ public class TestJpaConfig extends JpaBaseConfiguration {
        jpaProperties.put("hibernate.hbm2ddl.auto", "update");
        jpaProperties.put("hibernate.physical_naming_strategy", CamelCaseToUnderscoresNamingStrategy.class);
        jpaProperties.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
-       jpaProperties.put("hibernate.show_sql", "true");
 
        return jpaProperties;
     }

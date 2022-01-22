@@ -10,9 +10,9 @@ import lombok.ToString;
 @Getter
 @ToString
 public class ApiResponse<T> {
-    private final T body;
     private final boolean success;
     private final String message;
+    private final T body;
 
     @JsonCreator
     public ApiResponse(@JsonProperty("body") T body,

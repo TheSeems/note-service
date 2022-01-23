@@ -1,9 +1,7 @@
 package me.theseems.noteservice.entity;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import org.hibernate.Hibernate;
@@ -19,11 +17,13 @@ import java.util.Objects;
 @AllArgsConstructor
 @ToString(callSuper = true)
 public class Note extends BaseEntity {
+    @Column(nullable = false)
     private String title;
 
-    @Column(length = 10_000)
+    @Column(length = 10_000, nullable = false)
     private String content;
 
+    @Column(nullable = false)
     private LocalDateTime createdAt;
 
     public Note() {

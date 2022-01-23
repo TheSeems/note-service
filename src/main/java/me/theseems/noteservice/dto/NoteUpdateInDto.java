@@ -5,11 +5,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.EqualsAndHashCode;
 import lombok.Value;
 
+import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
 @EqualsAndHashCode(callSuper = true)
 @Value
 public class NoteUpdateInDto extends NoteBaseDto {
+    @NotNull
     LocalDateTime createdAt;
 
     @JsonCreator
